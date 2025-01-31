@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  legalprodb:
+    image: postgres:latest
+    container_name: legalpro-db
+    restart: always
+    environment:
+      POSTGRES_DB: legalproDB
+      POSTGRES_USER: legalpro
+      POSTGRES_PASSWORD: legalpro
+    ports:
+      - "5433:5432"

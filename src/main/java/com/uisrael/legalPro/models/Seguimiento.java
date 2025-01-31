@@ -1,5 +1,6 @@
 package com.uisrael.legalPro.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -23,6 +24,7 @@ public class Seguimiento {
 
     @ManyToOne
     @JoinColumn(name = "casoId")
+    @JsonIgnore
     private Caso caso;
 
     public Seguimiento(int seguimientoId, Date fechaCreacion, Date fechaActualizacion, Date fechaLimite, String estado, String descripcion, Boolean recordatorio, Caso caso) {

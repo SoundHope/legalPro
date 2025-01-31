@@ -23,4 +23,5 @@
    - Usuario: legalpro
    - Contraseña: legalpro
    - Base de datos: legalproDB.
+## Paso 2: Importar el archivo LegalPro.postman_collection.json en Postman
 7. Disfrute :)

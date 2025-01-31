@@ -1,5 +1,6 @@
 package com.uisrael.legalPro.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -20,10 +21,12 @@ public class Tarea {
 
     @ManyToOne
     @JoinColumn(name = "usuarioId")
+    @JsonIgnore
     private Usuario usuario;
 
     @ManyToOne
     @JoinColumn(name = "casoId")
+    @JsonIgnore
     private Caso caso;
 
     public Tarea() {

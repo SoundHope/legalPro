@@ -1,5 +1,6 @@
 package com.uisrael.legalPro.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -23,12 +24,15 @@ public class Caso {
 
     @ManyToOne
     @JoinColumn(name = "clienteId")
+    @JsonIgnore
     private Cliente cliente;
 
     @OneToMany(mappedBy = "caso")
+    @JsonIgnore
     private List<Seguimiento> seguimientos = new ArrayList<>();
 
     @OneToMany(mappedBy = "caso")
+    @JsonIgnore
     private List<Tarea> tareas = new ArrayList<>();
 
     public Caso() {

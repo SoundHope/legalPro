@@ -1,0 +1,693 @@
+{
+	"info": {
+		"_postman_id": "6052959c-63a2-4cc4-b86b-f0250ce5ad6f",
+		"name": "LegalPro",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32820114"
+	},
+	"item": [
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "Crear un nuevo usuario",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Juan\",\r\n    \"rol\": \"Admin\",\r\n    \"email\": \"juan.perez@example.com\",\r\n    \"telefono\": \"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/usuario/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar un usuario existente",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"usuarioId\":1, \"nombre\":\"Juan Perez\", \"rol\":\"ABOGADO\", \"email\":\"juan.perez@example.com\", \"telefono\":\"987654321\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/usuario/update/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener todos los usuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/usuario/found/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario",
+								"found",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar usuarios por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/usuario/found/id/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario",
+								"found",
+								"id",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Clientes",
+			"item": [
+				{
+					"name": "Crear un nuevo cliente",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fechaCreacion\": \"2023-11-01\",\r\n    \"dni\": \"12345678\",\r\n    \"nombres\": \"Maria\",\r\n    \"apellidos\": \"Lopez\",\r\n    \"telefono\": \"123456789\",\r\n    \"email\": \"maria.lopez@example.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cliente/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cliente",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar un cliente existente",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clienteId\": 1,\r\n    \"fechaCreacion\": \"2023-11-01\",\r\n    \"dni\": \"12345678\",\r\n    \"nombres\": \"Maria\",\r\n    \"apellidos\": \"Lopez\",\r\n    \"telefono\": \"987654321\",\r\n    \"email\": \"maria.lopez@example.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cliente/update/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cliente",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener todos los clientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cliente/found/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cliente",
+								"found",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar clientes por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cliente/found/id/12345678",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cliente",
+								"found",
+								"id",
+								"12345678"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Seguimientos",
+			"item": [
+				{
+					"name": "Crear un nuevo seguimiento",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fechaCreacion\": \"2023-11-01\",\r\n    \"fechaActualizacion\": \"2023-11-01\",\r\n    \"fechaLimite\": \"2023-12-01\",\r\n    \"estado\": \"Pendiente\",\r\n    \"descripcion\": \"Primera audiencia del caso\",\r\n    \"recordatorio\": true,\r\n    \"casoId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/seguimiento/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"seguimiento",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar un seguimiento existente",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"seguimientoId\":1, \"fechaCreacion\":\"2023-11-01\", \"fechaActualizacion\":\"2023-11-02\", \"fechaLimite\":\"2023-12-01\", \"estado\":\"Completado\", \"descripcion\":\"Primera audiencia del caso actualizada\", \"recordatorio\":false, \"casoId\":1}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/seguimiento/update/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"seguimiento",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener todos los seguimientos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/seguimiento/found/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"seguimiento",
+								"found",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar seguimientos por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/seguimiento/found/id/12345678",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"seguimiento",
+								"found",
+								"id",
+								"12345678"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tareas",
+			"item": [
+				{
+					"name": "Crear una nueva tarea",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Revisar documento\",\r\n    \"descripcion\": \"Revisar el documento del caso 123\",\r\n    \"usuarioId\": 1,\r\n    \"casoId\": 1,\r\n    \"fechaCreacion\": \"2023-11-01\",\r\n    \"fechaActualizacion\": \"2023-11-01\",\r\n    \"fechaLimite\": \"2023-12-01\",\r\n    \"estado\": \"Pendiente\",\r\n    \"prioridad\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/tarea/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tarea",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar una tarea existente",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"tareaId\":1, \"nombre\":\"Revisar documento\", \"descripcion\":\"Revisar el documento del caso 123 actualizado\", \"usuarioId\":1, \"casoId\":1, \"fechaCreacion\":\"2023-11-01\", \"fechaActualizacion\":\"2023-11-02\", \"fechaLimite\":\"2023-12-01\", \"estado\":\"Completado\", \"prioridad\":1}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/tarea/update/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tarea",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener todas las tarea",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/tarea/found/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tarea",
+								"found",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar tareas por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/tarea/found/id/12345678",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tarea",
+								"found",
+								"id",
+								"12345678"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Casos",
+			"item": [
+				{
+					"name": "Crear un nuevo caso",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"fechaCreacion\":\"2023-11-01\", \"fechaActualizacion\":\"2023-11-01\", \"tipo\":\"Civil\", \"descripcion\":\"Caso de disputa de propiedad\", \"estado\":\"Abierto\", \"clienteId\":1}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/caso/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"caso",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar un caso existente",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"casoId\":1, \"fechaCreacion\":\"2023-11-01\", \"fechaActualizacion\":\"2023-11-02\", \"tipo\":\"Civil\", \"descripcion\":\"Caso de disputa de propiedad actualizado\", \"estado\":\"Cerrado\", \"clienteId\":1}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/caso/update/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"caso",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener todos los casos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/caso/found/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"caso",
+								"found",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar casos por DNI",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/caso/found/dni/DNI4553",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"caso",
+								"found",
+								"dni",
+								"DNI4553"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Servicios",
+			"item": [
+				{
+					"name": "Generar Caso Para un cliente",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"caso\": {\n    \"fechaCreacion\": \"2023-10-01T00:00:00Z\",\n    \"fechaActualizacion\": \"2023-10-01T00:00:00Z\",\n    \"tipo\": \"Tipo de Caso\",\n    \"descripcion\": \"Descripción del caso\",\n    \"estado\": \"Estado del caso\"\n  },\n  \"cliente\": {\n    \"fechaCreacion\": \"2023-10-01T00:00:00Z\",\n    \"dni\": \"1234567890\",\n    \"nombres\": \"Nombre del Cliente\",\n    \"apellidos\": \"Apellido del Cliente\",\n    \"telefono\": \"0987654321\",\n    \"email\": \"cliente@example.com\"\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/caso/createWithCliente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"caso",
+								"createWithCliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Seguimientos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/seguimiento/ordenados",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"seguimiento",
+								"ordenados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Generar Tarea y asignarla",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"casoId\": 1,\n  \"usuarioId\": 2,\n  \"fechaLimite\": \"2023-12-31T23:59:59Z\",\n  \"prioridad\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/tarea/createWithUsuario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tarea",
+								"createWithUsuario"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
